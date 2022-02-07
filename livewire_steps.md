@@ -15,3 +15,9 @@ $ php artisan migrate
 php artisan make:factory StudentFactory
 php artisan db:seed
 ```
+
+## create livewire COMPONENT:
+```
+php artisan make:livewire Students
+```
+
