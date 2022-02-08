@@ -21,3 +21,7 @@ php artisan db:seed
 php artisan make:livewire Students
 ```
 
+## to run our project in local server 
+```
+php artisan serve
+```
