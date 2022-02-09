@@ -1,11 +1,19 @@
 <div>
+    @include('livewire.create')
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    @if (session()->has('message'))
+                    <div class="alert alert-success">{{ session('message') }}</div>
+                @endif
                     <div class="card">
                         <div class="card-header">
                             <h3>All students</h3>
+
+                            <!-- Create Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+                                 Add New Student</button>
                         </div>
                         <div class="card-body">
                             <table class="table table-striped">

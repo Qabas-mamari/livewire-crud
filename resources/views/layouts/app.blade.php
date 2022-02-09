@@ -18,15 +18,15 @@
 
     @livewireScripts
 
-    <!-- <script>
+    <script>
         window.livewire.on('studentAdded', ()=>{
             $('#addStudentModel').modal('hide');
         });
         
-        window.livewire.on('studentUpdate', ()=>{
-            $('#updateStudentModel').modal('hide');
-        });
-    </script> -->
-
+        // window.livewire.on('studentUpdate', ()=>{
+        //     $('#updateStudentModel').modal('hide');
+        // });
+    </script> 
+    
 </body>
 </html>
