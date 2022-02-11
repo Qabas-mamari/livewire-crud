@@ -1,5 +1,6 @@
 <div>
     @include('livewire.create')
+    @include('livewire.update')
     <section>
         <div class="container">
             <div class="row">
@@ -22,6 +23,7 @@
                                     <th>Last Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
+                                    <th>Action</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($students as $student )
@@ -30,6 +32,9 @@
                                         <td>{{ $student->lastname }}</td>
                                         <td>{{ $student->email }}</td>
                                         <td>{{ $student->phone }}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#updateStudentModel" wire.click.prevent="edit({{ $student->id }})">Edit</button>
+                                        </td>
                                        </tr>
                                     @endforeach
                                 </tbody>

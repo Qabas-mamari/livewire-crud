@@ -23,9 +23,9 @@
             $('#addStudentModel').modal('hide');
         });
         
-        // window.livewire.on('studentUpdate', ()=>{
-        //     $('#updateStudentModel').modal('hide');
-        // });
+        window.livewire.on('studentUpdated', ()=>{
+            $('#updateStudentModel').modal('hide');
+        });
     </script> 
     
 </body>
