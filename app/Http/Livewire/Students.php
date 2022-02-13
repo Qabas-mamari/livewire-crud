@@ -46,6 +46,12 @@ class Students extends Component
         $this->phone = $student->phone; 
     }
 
+    public function delete($id){
+        
+        Student::where('id', $id)->delete();
+        session()->flash('message', 'Student Deleted Successfully!');
+
+    }
     public function update(){
         $this->validate([
             'firstname' => 'required',
@@ -67,6 +73,8 @@ class Students extends Component
             $this->emit('studentUpdated');
         }
     }
+
+   
     public function render()
     {
         $student = Student::orderBy('id', 'DESC')->get();
